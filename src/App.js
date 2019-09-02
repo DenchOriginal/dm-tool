@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.scss';
-import DieMenu from './components/Die/DieMenu.js'
+
+import Grid from './components/Grid/Grid'
+
 
 function App() {
   return (
     <div className="App">
-       <DieMenu />
+       <Grid />
     </div>
   );
 }
