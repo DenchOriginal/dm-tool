@@ -1,18 +1,38 @@
-.dice-wrapper {
-  background: url('img/d4.svg') no-repeat center;
+.diceWrapper {
   color: white;
   font-size: 3em;
   min-height: 150px;
-  width: 200px;
-  text-align: center;
-  position: relative;
-  vertical-align: middle;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  &.dice4 {
+    background: url('img/d4.svg') no-repeat center;
+  }
+
+  &.dice6 {
+    background: url('img/d6.svg') no-repeat center;
+  }
+
+  &.dice8 {
+    background: url('img/d8.svg') no-repeat center;
+  }
+
+  &.dice10 {
+    background: url('img/d10.svg') no-repeat center;
+  }
+
+  &.dice12 {
+    background: url('img/d12.svg') no-repeat center;
+  }
+
+  &.dice20 {
+    background: url('img/d20.svg') no-repeat center;
+  }
 
   .dice-text {
-    position: absolute;
-    top: 50%;
-    margin: 0 auto;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    padding: 30px;
   }
 }

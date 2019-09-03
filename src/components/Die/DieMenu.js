@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
+import classNames from 'classnames'
 import './DieMenu.scss'
 
 export default class DieMenu extends Component {
@@ -63,33 +64,40 @@ export default class DieMenu extends Component {
 
     render() {
         const { activeItem } = this.state
-        let activeDice;
-        let activeDiceRoller;
+        let activeDice
+        let activeDiceRoller
+        let activeDiceCSS
 
         if(activeItem === 'active') {
             activeDice = this.state.d4
             activeDiceRoller = this.rollD4
+            activeDiceCSS = 'diceWrapper dice4'
         } if(activeItem === '2') {
             activeDice = this.state.d6
             activeDiceRoller = this.rollD6
+            activeDiceCSS = 'diceWrapper dice6'
         } if(activeItem === '3') {
             activeDice = this.state.d8
             activeDiceRoller = this.rollD8
+            activeDiceCSS = 'diceWrapper dice8'
         } if(activeItem === '4') {
             activeDice = this.state.d10
             activeDiceRoller = this.rollD10
+            activeDiceCSS = 'diceWrapper dice10'
         } if(activeItem === '5') {
             activeDice = this.state.d12
             activeDiceRoller = this.rollD12
+            activeDiceCSS = 'diceWrapper dice12'
         } if(activeItem === '6') {
             activeDice = this.state.d20
             activeDiceRoller = this.rollD20
+            activeDiceCSS = 'diceWrapper dice20'
         }
 
         return (
             <div>
                 <Segment attached='top'>
-                    <div className='dice-wrapper'>
+                    <div className={activeDiceCSS}>
                       <p className='dice-text'>{activeDice}</p>
                     </div>
 
