@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Image } from 'semantic-ui-react'
-import DieMenu from '../Die/DieMenu.js'
+import DieMenu from '../../App/Die/DieMenu.js'
 
 const MainGrid = () => (
   <Grid celled>
